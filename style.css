@@ -236,3 +236,80 @@ label {
         font-size: 14px; /* Dimensione del font più piccola sui dispositivi più piccoli */
     }
 }
+
+/* Global Responsive Styles */
+html {
+    font-size: 16px; /* Responsive base font size */
+}
+
+@media (max-width: 1024px) {
+    .navbar, footer {
+        font-size: 14px; /* Slightly reduce navbar and footer font size */
+    }
+
+    .content-box, .section, form {
+        max-width: 95%; /* Make boxes and sections full width with slight padding */
+    }
+
+    .container, .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduce padding and spacing on smaller screens */
+    body, .content-box, .section {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .navbar, footer {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    form, .profile-section {
+        max-width: 100%; /* Full width form and profile section */
+        padding: 0;
+    }
+
+    label, .button-submit {
+        font-size: 14px; /* Smaller labels and button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: 1.2em; /* Slightly smaller heading sizes */
+    }
+
+    .content-box, form, .section, footer {
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    .profile-section img {
+        max-width: 80px; /* Reduce profile image size */
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .button-submit {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
