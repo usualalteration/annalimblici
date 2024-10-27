@@ -6,7 +6,7 @@ html {
 body {
     font-family: 'Lora', sans-serif;
     font-size: 18px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     background-image: url('sfondo.jpg'); /* Background image */
     background-repeat: repeat; /* Repeat the background image */
     background-size: 300px; /* Adjust size of the background image */
@@ -20,23 +20,20 @@ img {
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Fit within container if smaller */
     object-fit: cover; /* Crop images to fill specified dimensions */
-}
-
-/* Curriculum Image */
-.img-curriculum {
-    width: auto; /* Maintain original size for the curriculum image */
+    display: block; /* Make images block-level to position above or below text */
+    margin: 20px auto; /* Center images */
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgb(202, 96, 125);
+    background-color: #dd4573;
     overflow: hidden;
     text-align: center;
-    position: fixed; /* Fissa la navbar in cima alla pagina */
-    top: 0; /* Posiziona la navbar in alto */
-    left: 0; /* Allinea la navbar a sinistra */
-    width: 100%; /* Larghezza completa */
-    z-index: 1000; /* Assicurati che la navbar sia sopra gli altri contenuti */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -51,58 +48,60 @@ img {
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
+    text-align: justify; /* Justify text in sections */
 }
 
-.section:last-of-type {
-    padding-bottom: 80px; /* Space to avoid footer overlap */
+.section h1, .section h2, .section h3, .section h4, .section h5 {
+    text-align: center; /* Center align titles */
 }
 
 /* Text Centering */
 .center-text {
-    text-align: center; /* Center text */
-    margin: 20px 0; /* Add vertical margins */
+    text-align: center;
+    margin: 20px 0;
 }
 
 /* Profile Section */
 .profile-section {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
     margin-bottom: 20px;
+    text-align: justify; /* Justify text */
 }
 
 .profile-section img {
-    margin-right: 30px;
-    max-width: 100px; /* Reduced image size */
-    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px;
+    max-width: 100px;
+    border-radius: 8px;
 }
 
 /* Footer Styles */
 footer {
-    background-color: rgb(202, 96, 125); /* Footer background */
-    color: white; /* Footer text color */
-    text-align: center; /* Center footer content */
-    padding: 20px; /* Internal spacing */
-    width: 100vw; /* Full viewport width */
+    background-color: #ff4b6f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100vw;
     position: fixed;
-    bottom: 0; /* Position footer at bottom */
+    bottom: 0;
     left: 0;
-    opacity: 0; /* Hide footer initially */
-    transform: translateY(100%); /* Move footer out of view */
-    transition: opacity 0.5s, transform 0.5s; /* Smooth transition */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-/* Show Footer */
 .show-footer {
-    opacity: 1; /* Show footer */
-    transform: translateY(0); /* Bring footer into view */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Form Styles */
 form {
     display: flex;
-    flex-direction: column; /* Stack inputs vertically */
-    max-width: 400px; /* Limit max width of form */
-    margin: 20px auto; /* Center the form */
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
 form input,
@@ -112,177 +111,103 @@ form textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Lora', Arial, sans-serif; /* Font */
-    font-size: 16px; /* Dimensione del font */
-    background-color: #f9f9f9; /* Light background */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    transition: border-color 0.3s ease; /* Transizione per il colore del bordo */
+    font-family: 'Lora', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
 }
 
-/* Focus Styles */
 form input:focus,
 form textarea:focus {
-    border-color: rgb(202, 96, 125); /* Colore del bordo al focus */
-    outline: none; /* Rimuove il bordo predefinito */
-    box-shadow: 0 0 5px rgba(165, 108, 123, 0.5); /* Ombra al focus */
+    border-color: rgb(202, 96, 125);
+    outline: none;
+    box-shadow: 0 0 5px rgba(165, 108, 123, 0.5);
 }
 
-/* Textarea Styles */
 form textarea {
-    min-height: 150px; /* Altezza minima */
-    resize: vertical; /* Permette solo il ridimensionamento verticale */
+    min-height: 150px;
+    resize: vertical;
 }
 
 /* Content Box Styles */
 .content-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-    padding: 20px; /* Internal spacing */
-    border-radius: 8px; /* Rounded corners */
-    max-width: 800px; /* Max width to simulate A4 size */
-    margin: 20px auto; /* Center content box */
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify; /* Justify text */
+}
+
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5 {
+    text-align: center; /* Center align titles */
 }
 
 /* Heading Styles */
 h1, h2, h3, h4, h5 {
-    color: rgb(202, 96, 125);
+    color: #272375;
 }
 
 /* Button Styles */
 .button-submit {
-    background-color: rgb(202, 96, 125); /* Button background */
-    color: white; /* Button text color */
-    border: none; /* Remove default borders */
-    padding: 10px 20px; /* Internal spacing */
-    font-size: 16px; /* Font size */
-    font-family: 'Lora', Arial, sans-serif; /* Font style */
-    cursor: pointer; /* Pointer on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Transition for hover effect */
+    background-color: #544bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Lora', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button-submit:hover {
-    background-color: rgb(244, 173, 203); /* Hover background color */
+    background-color: rgb(244, 173, 203);
 }
 
 /* Flexbox Container Styles */
 .container {
-    display: flex; /* Use Flexbox for alignment */
-    align-items: center; /* Vertically center */
-    justify-content: space-between; /* Space between elements */
-    margin-top: 20px; /* Top margin */
-}
-
-/* Image Styles */
-.left-image {
-    max-width: 30%; /* Max width reduced */
-    width: 100%; /* Max width for responsiveness */
-    margin-right: 30px; /* Space between image and text */
-    border-radius: 8px; /* Rounded corners */
-}
-
-.right-text {
-    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: justify;
+    margin-top: 20px;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .navbar a {
-        padding: 10px 15px; /* Adjust padding for smaller screens */
+        padding: 10px 15px;
     }
-    
+
     .section {
-        padding: 15px; /* Reduce section padding */
+        padding: 15px;
     }
 
     .profile-section {
-        flex-direction: column; /* Stack image and text */
-        align-items: center; /* Center align items */
-    }
-
-    .profile-section img {
-        margin-bottom: 15px; /* Space below image */
+        text-align: center;
     }
 
     .content-box {
-        padding: 15px; /* Reduce padding in content box */
+        padding: 15px;
     }
 
     form {
-        max-width: 100%; /* Full width on small screens */
-    }
-
-    .left-image {
-        max-width: 70%; /* Full width on small screens */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 15px; /* Space below image */
+        max-width: 100%;
     }
 }
 
 /* Label Styles */
 label {
-    color: black; /* Colore del testo */
-    display: block; /* Rende le label elementi a blocco */
-    margin: 0 auto 5px; /* Spazio sotto le label e centrare orizzontalmente */
-    text-align: center; /* Centra il testo */
-    font-weight: normal; /* Grassetto per le label */
-    font-size: 16px; /* Dimensione del font */
-    font-family: 'Lora', Arial, sans-serif; /* Font */
-}
-
-/* Responsive Label Styles */
-@media (max-width: 768px) {
-    label {
-        font-size: 14px; /* Dimensione del font più piccola sui dispositivi più piccoli */
-    }
-}
-
-/* Global Responsive Styles */
-html {
-    font-size: 16px; /* Responsive base font size */
-}
-
-@media (max-width: 1024px) {
-    .navbar, footer {
-        font-size: 14px; /* Slightly reduce navbar and footer font size */
-    }
-
-    .content-box, .section, form {
-        max-width: 95%; /* Make boxes and sections full width with slight padding */
-    }
-
-    .container, .profile-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .left-image {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Reduce padding and spacing on smaller screens */
-    body, .content-box, .section {
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-    .navbar, footer {
-        font-size: 12px; /* Further reduce font size */
-    }
-
-    form, .profile-section {
-        max-width: 100%; /* Full width form and profile section */
-        padding: 0;
-    }
-
-    label, .button-submit {
-        font-size: 14px; /* Smaller labels and button text */
-    }
+    color: black;
+    display: block;
+    margin: 0 auto 5px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Lora', Arial, sans-serif;
 }
 
 @media (max-width: 480px) {
@@ -292,16 +217,12 @@ html {
     }
 
     h1, h2, h3, h4, h5 {
-        font-size: 1.2em; /* Slightly smaller heading sizes */
+        font-size: 1.2em;
     }
 
     .content-box, form, .section, footer {
         padding: 10px;
         margin: 5px auto;
-    }
-
-    .profile-section img {
-        max-width: 80px; /* Reduce profile image size */
     }
 
     label {
@@ -312,4 +233,11 @@ html {
         padding: 8px 15px;
         font-size: 14px;
     }
+}
+
+.img-first {
+    width: 50%; /* Imposta la larghezza al 50% della dimensione originale */
+    height: auto; /* Mantiene il rapporto d'aspetto */
+    display: block;
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
 }
