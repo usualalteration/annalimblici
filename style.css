@@ -78,7 +78,7 @@ img {
 
 /* Footer Styles */
 footer {
-    background-color: #ff4b6f;
+    background-color: #dd4573;
     color: white;
     text-align: center;
     padding: 20px;
@@ -120,7 +120,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: rgb(202, 96, 125);
+    border-color:  #dd4573;
     outline: none;
     box-shadow: 0 0 5px rgba(165, 108, 123, 0.5);
 }
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5 {
 
 /* Button Styles */
 .button-submit {
-    background-color: #544bff;
+    background-color:  #272375;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -213,7 +213,7 @@ label {
 @media (max-width: 480px) {
     .navbar a {
         padding: 8px 10px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     h1, h2, h3, h4, h5 {
