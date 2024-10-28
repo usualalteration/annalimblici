@@ -25,7 +25,8 @@ img {
 /* Navbar Styles */
 .navbar {
     background-color: #dd4573;
-    font-family: 'Pacifico';
+    font-family: 'Lora';
+    font-style: normal;
     overflow: hidden;
     text-align: center;
     position: fixed;
@@ -54,7 +55,8 @@ img {
 .section h1, .section h2, .section h3, .section h4, .section h5,
 .content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5 {
     text-align: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lora';
+    font-style: bold;
     font-weight: 400;
 }
 
