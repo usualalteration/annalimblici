@@ -6,9 +6,7 @@ html {
 body {
     font-family: 'Lora', sans-serif;
     font-size: 18px;
-    background-color: #ffffff;
-    background-image: url('sfondo.jpg'); /* Background image */
-    background-repeat: repeat; /* Repeat the background image */
+    background: #ffffff url('sfondo.jpg') repeat; /* Background image */
     background-size: 300px; /* Adjust size of the background image */
     margin: 0;
     padding: 0;
@@ -16,17 +14,18 @@ body {
 }
 
 img {
-    width: auto; /* Set all images to auto width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Fit within container if smaller */
-    object-fit: cover; /* Crop images to fill specified dimensions */
-    display: block; /* Make images block-level to position above or below text */
-    margin: 20px auto; /* Center images */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
 }
 
 /* Navbar Styles */
 .navbar {
     background-color: #dd4573;
+    font-family: 'Pacifico';
     overflow: hidden;
     text-align: center;
     position: fixed;
@@ -48,14 +47,17 @@ img {
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
-    text-align: justify; /* Justify text in sections */
+    text-align: justify;
 }
 
-.section h1, .section h2, .section h3, .section h4, .section h5 {
-    text-align: center; /* Center align titles */
+/* Text and Title Styling */
+.section h1, .section h2, .section h3, .section h4, .section h5,
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5 {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
 }
 
-/* Text Centering */
 .center-text {
     text-align: center;
     margin: 20px 0;
@@ -64,10 +66,10 @@ img {
 /* Profile Section */
 .profile-section {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    text-align: justify; /* Justify text */
+    text-align: justify;
 }
 
 .profile-section img {
@@ -79,9 +81,10 @@ img {
 /* Footer Styles */
 footer {
     background-color: #dd4573;
+    font-family: 'Lora';
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     width: 100vw;
     position: fixed;
     bottom: 0;
@@ -120,7 +123,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color:  #dd4573;
+    border-color: #dd4573;
     outline: none;
     box-shadow: 0 0 5px rgba(165, 108, 123, 0.5);
 }
@@ -138,21 +141,18 @@ form textarea {
     border-radius: 8px;
     max-width: 800px;
     margin: 20px auto;
-    text-align: justify; /* Justify text */
-}
-
-.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5 {
-    text-align: center; /* Center align titles */
+    text-align: justify;
 }
 
 /* Heading Styles */
 h1, h2, h3, h4, h5 {
     color: #272375;
+    font-weight: 500;
 }
 
 /* Button Styles */
 .button-submit {
-    background-color:  #272375;
+    background-color: #272375;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -161,6 +161,7 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .button-submit:hover {
@@ -170,7 +171,7 @@ h1, h2, h3, h4, h5 {
 /* Flexbox Container Styles */
 .container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     align-items: center;
     text-align: justify;
     margin-top: 20px;
@@ -227,17 +228,30 @@ label {
 
     label {
         font-size: 12px;
+        font-family: 'Lora';
     }
 
     .button-submit {
         padding: 8px 15px;
         font-size: 14px;
+        font-family: 'Lora';
     }
 }
 
 .img-first {
-    width: 50%; /* Imposta la larghezza al 50% della dimensione originale */
-    height: auto; /* Mantiene il rapporto d'aspetto */
+    width: 50%;
+    height: auto;
     display: block;
-    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+    margin: 0 auto;
+}
+
+/* Text alignment consistency */
+body, .section, .profile-section, .content-box, .container, form, label, h1, h2, h3, h4, h5, p {
+    text-align: left;
+}
+
+.center-text, .section h1, .section h2, .section h3, .section h4, .section h5, 
+.content-box h1, .content-box h2, .content-box h3, .content-box h4, .content-box h5,
+.navbar, footer, .button-submit {
+    text-align: center;
 }
